@@ -1,0 +1,249 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Showcase -->
+  <section id="showcase">
+    <div class="container text-center">
+      <div class="home-search p-5">
+        <div class="overlay p-5">
+          <h1 class="display-4 mb-4">
+            Property Searching Just Got So Easy
+          </h1>
+          <p class="lead">This is the home page of real estate. You can search the properties based on your requirement like search with aminities, number of bedroom, state wise search etc</p>
+          <div class="search">
+            <form action="search.html">
+              <!-- Form Row 1 -->
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">Keywords</label>
+                  <input type="text" name="keywords" class="form-control" placeholder="Keyword (Pool, Garage, etc)">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">City</label>
+                  <input type="text" name="city" class="form-control" placeholder="City">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">State</label>
+                  <select name="state" class="form-control">
+                    <option selected="true" disabled="disabled">State (All)</option>
+                    <option value="MH">Maharashtra</option>
+                    <option value="DL">Delhi</option>
+                    <option value="KL">Kolkatta</option>
+                    
+                  </select>
+                </div>
+              </div>
+              <!-- Form Row 2 -->
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label class="sr-only">Bedrooms</label>
+                  <select name="bedrooms" class="form-control">
+                    <option selected="true" disabled="disabled">Bedrooms (All)</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <select class="form-control" id="type">
+                    <option selected="true" disabled="disabled">Max Price (Any)</option>
+                    <option value="100000">100,000</option>
+                    <option value="200000">200,000</option>
+                    <option value="300000">300,000</option>
+                    <option value="400000">400,000</option>
+                    <option value="500000">500,000</option>
+                    <option value="600000">600,000</option>
+                    <option value="700000">700,000</option>
+                    <option value="800000">800,000</option>
+                    <option value="900000">900,000</option>
+                    <option value="1000000">1M+</option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alert -->
+  {% include 'partials/_alert.html' %}
+  <!-- Listings -->
+  <section id="listings" class="py-2">
+    <div class="container">
+      <h3 class="text-center mb-3">Latest Listings</h3>
+      <div class="row">
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="assets/img/homes/home-1.jpg" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">9000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary">Balgandharv</h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> J.M road </p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 2500</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-user"></i> Samir Shinde</div>
+              </div>
+              <div class="row text-secondary pb-2">
+                <div class="col-6">
+                  <i class="fas fa-clock"></i> 5 days ago</div>
+              </div>
+              <hr>
+              <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="assets/img/homes/home-2.jpg" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">20,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary">Marriot</h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> S.B road</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-user"></i> Parag</div>
+              </div>
+              <div class="row text-secondary pb-2">
+                <div class="col-6">
+                  <i class="fas fa-clock"></i> 5 days ago</div>
+              </div>
+              <hr>
+              <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="assets/img/homes/home-3.jpg" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">8000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary">E-Street</h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> S.B road</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-user"></i> Mak</div>
+              </div>
+              <div class="row text-secondary pb-2">
+                <div class="col-6">
+                  <i class="fas fa-clock"></i> 5 days ago</div>
+              </div>
+              <hr>
+              <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-5 bg-secondary text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4">
+          
+          	<img src="{% static 'img/consultant-service.jpg' %}" class="logo" alt="No image found">
+
+          
+          <hr>
+          <h3>Consulting Services</h3>
+          <p>We provide best services to end customer, bluk booking, coporate tranings. Please get in touch with us for more details.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'img/all-in-one.jpg' %}" class="logo" alt="No image found">
+          <hr>
+          <h3>Propery Management</h3>
+          <p>We provide best services to end customer, bluk booking, coporate tranings. Please get in touch with us for more details..</p>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'img/consultant-service.jpg' %}" class="logo" alt="No image found">
+          <hr>
+          <h3>Renting & Selling</h3>
+          <p>We provide best services to end customer, bluk booking, coporate tranings. Please get in touch with us for more details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
